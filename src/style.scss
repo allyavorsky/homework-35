@@ -1,3 +1,7 @@
+$color-black: #2d2d2d;
+$color-black-transparent: rgba(0, 0, 0, 0.16);
+$color-gray: #f8f8f8;
+
 @font-face {
   font-family: "Roboto";
   src: url("./assets/fonts/Roboto-Regular.woff2") format("woff2");
@@ -14,12 +18,12 @@ section {
   max-width: 768px;
   margin: 96px;
   padding: 96px;
-  background: #f9f9f9;
-  border: 1px solid rgba(0, 0, 0, 0.16);
+  background: $color-gray;
+  border: 1px solid $color-black-transparent;
 }
 
 h1 {
-  color: #2d2d2d;
+  color: $color-black;
   margin: 0 0 32px;
 }
 
@@ -32,7 +36,7 @@ p {
 
 hr {
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  border-bottom: 1px solid $color-black-transparent;
 }
 
 img {
