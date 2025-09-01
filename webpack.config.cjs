@@ -1,6 +1,8 @@
 const path = require("path");
+const ESLintPlugin = require("eslint-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 module.exports = {
   mode: "development",
@@ -31,6 +33,11 @@ module.exports = {
 
   // Plugins
   plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: "static",
+      openAnalyzer: false,
+    }),
+    new ESLintPlugin({ extensions: ["ts", "js"] }),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
@@ -43,9 +50,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: "ts-loader",
+        test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
       },
       {
         test: /\.css$/i,

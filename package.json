@@ -1,12 +1,13 @@
 {
   "name": "homework-35",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack serve --open"
+    "build": "webpack --config webpack.config.cjs",
+    "start": "webpack serve --open --config webpack.config.cjs"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,15 @@
   },
   "homepage": "https://github.com/allyavorsky/homework-35#readme",
   "devDependencies": {
+    "@babel/core": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-typescript": "^7.27.1",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
+    "babel-loader": "^10.0.0",
     "css-loader": "^7.1.2",
+    "eslint": "^9.34.0",
+    "eslint-webpack-plugin": "^5.0.2",
     "html-webpack-plugin": "^5.6.4",
     "mini-css-extract-plugin": "^2.9.4",
     "sass": "^1.91.0",
@@ -28,7 +37,9 @@
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.4",
     "typescript": "^5.9.2",
+    "typescript-eslint": "^8.41.0",
     "webpack": "^5.101.3",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
   },

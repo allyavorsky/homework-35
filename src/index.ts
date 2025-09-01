@@ -2,11 +2,13 @@ import "./style.scss";
 import WebpackLogo from "./assets/images/shiba-dog.jpg";
 import { greet } from "./app";
 
+const unusedVariable = 'Я не використовуюсь';
+
 const logoElement = document.getElementById("shiba-dog") as HTMLImageElement;
 logoElement.src = WebpackLogo;
 
-// TypeScript
-const greetingMessage = greet("TypeScript");
+// TypeScript/Babel
+const greetingMessage = greet();
 const messageContainer = document.createElement("p");
 messageContainer.textContent = greetingMessage;
 const section = document.querySelector("section");
