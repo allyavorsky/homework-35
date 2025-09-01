@@ -1,0 +1,1 @@
+(()=>{"use strict";document.getElementById("shiba-dog").src="/homework-35/assets/images/shiba-dog.jpg";var e,t=(e="".concat("✅"," Babel успішно налаштовано."),console.log(e),e),o=document.createElement("p");o.textContent=t;var c=document.querySelector("section");c&&c.prepend(o)})();
